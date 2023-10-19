@@ -66,9 +66,14 @@ function cadastrarDespesa(){
    
     if(despesa.validarDados()){
         bd.gravar(despesa)
-        $('#sucessoGravacao').modal('show')
+        $('#mensagem').text("Registro inserido com sucesso").css('color', 'green');
+        $('#mensagemec').text("Despesa foi cadastrada com sucesso").css('color', 'black');
+        $('#registraDespesa').modal('show')
     } else {
-        $('#erroGravacao').modal('show')
+        $('#mensagem').text("Registro inválido").css('color', 'red');
+        $('#mensagemec').text("Erro ao inserir registro, verifique se os campos foram preenchidos corretamente!");
+        $('#botao').text('Voltar e corrigir').removeClass('btn-success').addClass('btn-danger')
+        $('#registraDespesa').modal('show')
     }
     
 
