@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
 	<head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Orçamento pessoal</title>
 
 		<!-- Bootstrap início -->
@@ -19,7 +21,7 @@
 
 	</head>
 
-  <body>
+  <body onload="carregaListaDespesas()">
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
@@ -27,7 +29,7 @@
         <a class="navbar-brand" href="#">
            <img src="img/logo.png" width="50" height="35" alt="Orçamento pessoal">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -124,7 +126,8 @@
               </tr>
             </thead>
 
-            <tbody>
+            <tbody id="listasDespesas">
+              
             </tbody>
           </table>
         </div>
